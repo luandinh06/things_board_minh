@@ -38,50 +38,15 @@ const Sensor = () => {
   }, []);
   console.log({ info });
   return (
-    <>
-      <Title>Sensor Container</Title>
-      <Table info={info}/>
-      <PageContainer>
-        <Temp
-          name='Temperature 1'
-          min={0}
-          max={49}
-          value={info?.Temperature1 && info?.Temperature1[0] && info?.Temperature1[0]?.value}
-          color='#FF3131
-'
-        />
-        <Temp
-          name='Humidity 1'
-          min={0}
-          max={100}
-          value={info?.Humidity1 && info?.Humidity1[0] && info?.Humidity1[0]?.value}
-          color='#39ff14'
-        />
-        <Temp
-          name='Temperature 2'
-          min={0}
-          max={49}
-          value={info?.Temperature2 && info?.Temperature2[0] && info?.Temperature2[0]?.value}
-          color='#FF3131
-'
-        />
-
-        <Temp
-          name='Humidity 2'
-          min={0}
-          max={100}
-          value={info?.Humidity2 && info?.Humidity2[0] && info?.Humidity2[0]?.value}
-          color='#39ff14'
-        />
-        <Temp
-          name='Battery'
-          min={0}
-          max={100}
-          value={info?.Battery && info?.Battery[0] && info?.Battery[0]?.value}
-          color='#fff01f'
-        />
-      </PageContainer>
-    </>
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <iframe
+        src='https://demo.thingsboard.io/dashboard/7696eb20-bf25-11ec-9a68-6b50da95566e?publicId=be578820-c010-11ec-9a68-6b50da95566e'
+        title='Iframe Example'
+        width='100%'
+        height='100%'
+        style={{ border: 'none', marginTop: '8px' }}
+      />
+    </div>
   );
 };
 

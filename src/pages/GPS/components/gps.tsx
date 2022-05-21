@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Card from './Card';
-import Temp from './Temp';
 import axios from 'axios';
 
-const HomePage = () => {
+const GPS = () => {
   const [info, setInfo] = useState([] as any);
   useEffect(() => {
     const x = async () => {
@@ -23,7 +21,7 @@ const HomePage = () => {
       const token = res?.data?.token;
 
       const data = await axios.get(
-        'https://demo.thingsboard.io:443/api/plugins/telemetry/ASSET/9076bd40-6ecb-11ec-9a90-af0223be0666/values/timeseries',
+        'https://demo.thingsboard.io/dashboard/792c2a30-c010-11ec-9a68-6b50da95566e?publicId=be578820-c010-11ec-9a68-6b50da95566e',
         {
           headers: {
             'Content-Type': 'application/json',
@@ -156,7 +154,7 @@ const HomePage = () => {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <iframe
-        src='https://demo.thingsboard.io/dashboard/31def7f0-c706-11ec-9a68-6b50da95566e?publicId=be578820-c010-11ec-9a68-6b50da95566e'
+        src='https://demo.thingsboard.io/dashboard/792c2a30-c010-11ec-9a68-6b50da95566e?publicId=be578820-c010-11ec-9a68-6b50da95566e'
         title='Iframe Example'
         width='100%'
         height='100%'
@@ -178,4 +176,4 @@ const PageContainer = styled.div`
   text-align: center;
 `;
 
-export default HomePage;
+export default GPS;

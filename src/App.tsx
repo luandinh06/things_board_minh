@@ -5,14 +5,16 @@ import { Provider } from 'react-redux';
 import routes from 'routes';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Menu from './pages/Menu/Menu';
 
 const App: React.FC = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Header>
+      {/* <Header>
         <Link to='/'>Control Container</Link>
         <Link to='/sensor'>Sensor Container</Link>
-      </Header>
+      </Header> */}
+      <Menu />
       {routes}
     </ConnectedRouter>
   </Provider>
