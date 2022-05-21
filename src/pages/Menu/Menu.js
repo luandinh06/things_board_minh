@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import './Menu.scss';
+import './Menu.css';
 
 const MenuLink = ({ label, to, activeOnlyWhenExact }) => {
     return (
